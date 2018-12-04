@@ -9,6 +9,7 @@
     let sound = document.querySelectorAll(".preview")
     let showStartButton = document.getElementById('start-button')
     let start = document.getElementById('start')
+    let score = 0
 
     let xRay = []
     for(i=100; i < 1300; i++){
@@ -116,6 +117,8 @@
            red.addEventListener("click", function(event){
                 stage.removeChild(event.target);
                 stage.update();
+                score += 1
+                console.log(score)
             }.bind(this));
 
             function ballTimeout(){
