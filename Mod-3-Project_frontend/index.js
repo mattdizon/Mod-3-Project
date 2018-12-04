@@ -10,6 +10,7 @@
     let showStartButton = document.getElementById('start-button')
     let start = document.getElementById('start')
     let score = 0
+    let ball = 0
 
     let xRay = []
     for(i=100; i < 1300; i++){
@@ -111,15 +112,19 @@
            red.y = yRay[Math.floor(Math.random()*yRay.length)];
            stage.addChild(red);
            stage.update();
-           setTimeout(ballTimeout, 1000)
+           ball += 1
+           setTimeout(ballTimeout, 5000)
+
 
 
            red.addEventListener("click", function(event){
                 stage.removeChild(event.target);
                 stage.update();
                 score += 1
+                console.log(ball)
                 console.log(score)
             }.bind(this));
+
 
             function ballTimeout(){
                 stage.removeChild(red);
@@ -137,11 +142,15 @@
            blue.y = yRay[Math.floor(Math.random()*yRay.length)];
            stage.addChild(blue);
            stage.update();
-           setTimeout(ballTimeout, 1500)
+           ball += 1
+           setTimeout(ballTimeout, 5000)
 
            blue.addEventListener("click", function(event){
                 stage.removeChild(event.target);
                 stage.update();
+                score += 1
+                console.log(ball)
+                console.log(score)
             }.bind(this));
 
             function ballTimeout(){
@@ -159,11 +168,15 @@
            green.y = yRay[Math.floor(Math.random()*yRay.length)];
            stage.addChild(green);
            stage.update();
-           setTimeout(ballTimeout, 2000)
+           ball += 1
+           setTimeout(ballTimeout, 5000)
 
            green.addEventListener("click", function(event){
                 stage.removeChild(event.target);
                 stage.update();
+                score += 1
+                console.log(ball)
+                console.log(score)
             }.bind(this));
             function ballTimeout(){
                 stage.removeChild(green);
