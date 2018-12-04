@@ -15,7 +15,9 @@
     function showSongMenu(){
 
     }
+    
     playButton.addEventListener('click',hideshow,false);
+
 
     function hideshow() {
         document.getElementById('home-Button').style.display = 'block';
