@@ -1,8 +1,6 @@
 #c{
 
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    z-index:0;
+    z-index:-1;
     position:absolute;
     left:0px;
     top:0px;
@@ -49,4 +47,14 @@
 
 #home-Button{
     z-index: 2;
+}
+#start-button{
+    z-index:2;
+}
+.hide{
+display:none;
+}
+
+.show{
+display:block;
 }
