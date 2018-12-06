@@ -138,7 +138,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #FF8C00;
+    background-color: #5F9F9F;
 }
 tr:nth-child(odd) {
     background-color: #D1EEEE;
@@ -171,6 +171,9 @@ display:none;
 
 .show{
 display:block;
+}
+#particle{
+    z-index: -99999;
 }
 
 @font-face { font-family: bit; src: url('font/8-Bit Madness.ttf'); }

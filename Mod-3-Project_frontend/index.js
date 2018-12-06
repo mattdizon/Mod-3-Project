@@ -334,8 +334,10 @@
         .then(resp => resp.json())
     }
 
-    resizeCanvas();
 
+
+
+    resizeCanvas();
     playButton.addEventListener('click',showSongMenu)
     scoreButton.addEventListener('click', showSongScoreMenu)
     songs.addEventListener('click', songChoice)
