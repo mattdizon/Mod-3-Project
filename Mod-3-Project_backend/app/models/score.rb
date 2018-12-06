@@ -1,3 +1,3 @@
 class Score < ApplicationRecord
-    belongs_to :scores
+    belongs_to :song
 end

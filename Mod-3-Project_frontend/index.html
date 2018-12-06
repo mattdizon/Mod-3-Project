@@ -11,36 +11,56 @@
 
    <!--When click play game show songs menu -->
    <!--When click at songs menu start to demo song and present start button -->
-   <div id = "home-Button">
-       <button id = "button1" >Play Game</button>
-       <!--When click See Scores Present Songs Score Menu -->
-       <!--On click of song show scores for the song -->
-       <button id = "button2">See Scores</button>
-   </div>
-   <div id="song-menu" class = "hide">
-       <ol>
-           <li class = "1">Konuko - Toumei Elegy</li>
-           <li class = "2">Tear Rain</li>
-           <li class = "3">Nightcore - Rockefeller Street</li>
-           <li class = "4">Konosuba</li>
-       </ol>
-   </div>
-   <div class = "hide" id = "start-button">
-       <button id = "start"> Start </button>
-   </div>
-   <div class="hide" id = "percent">
-       <h1>0</h1>
-       <h1>100%</h1>
-   </div>
-   <div class="hide" id = "gameBoard">
+        <div id = "home-Button">
+            <button id = "button1" >Play Game</button>
+            <!--When click See Scores Present Songs Score Menu -->
+            <!--On click of song show scores for the song -->
+            <button id = "button2">See Scores</button>
+        </div>
 
-   </div>
+        <div id="song-menu" class = "hide">
+            <ol class = "list-styler" id = "song-list">
 
 
-   <audio class = "preview" id = "audio-1" src = "music/five.mp3"></audio>
-   <audio class = "preview" id = "audio-2" src = "music/tearRain.mp3"></audio>
-   <audio class = "preview" id = "audio-3" src = "music/nightcore.mp3"></audio>
-   <audio class = "preview" id = "audio-4" src = "music/konosuba.mp3"></audio>
-   <script type="text/javascript" src='index.js'></script>
+            </ol>
+            <button class = "hide" id = "start"> Start </button>
+
+        </div>
+
+
+
+
+        <div class="hide" id = "gameStats">
+            <h1>0</h1>
+            <h1 id = "percent">100%</h1>
+        </div>
+
+        <div class="hide" id = "gameBoard">
+        </div>
+
+        <div class = "hide" id = "songScoreMenu">
+            <ol class = "list-styler" id = "songScoreSelector">
+            </ol>
+
+        </div>
+        <div id="songScoreboard" class ="hide">
+            <h1>High Scores</h1>
+            <table id = songScoreboardTable>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+              </tr>
+          </table>
+
+        </div>
+
+
+
+        <audio class = "preview" id = "audio-1" src = "music/konosuba.mp3"></audio>
+        <audio class = "preview" id = "audio-2" src = "music/dragonball.mp3"></audio>
+        <!--  <audio class = "preview" id = "audio-3" src = "music/nightc.mp3"></audio>-->
+        <audio class = "preview" id = "audio-3" src = "music/foodwars.mp3"></audio>
+        <script type="text/javascript" src='index.js'></script>
     </body>
 </html>

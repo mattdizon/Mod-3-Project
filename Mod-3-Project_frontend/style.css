@@ -52,26 +52,44 @@
 #home-Button{
     z-index: 2;
 }
-#start-button{
+#start{
     z-index:2;
+    background-color: #008CBA;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: auto;
+    width:inherit;
+
 }
-#percent h1 {
+#gameStats h1 {
     font-size: 6em;
     margin-left: 5%;
     margin-top: 1%;
+}
+
+#gameStats{
+    width: 20px;
     font-family: bit;
     color: #fff;
 }
+
 #gameBoard{
-    background-color: #fff;
-    height: 400px;
-    width: 400px;
+    background-color:#B0B0B0;
+    height: 40%;
+    width: 60%;
     z-index: 3;
     border-radius: 25px;
+    margin: auto;
+    opacity: .8;
+
 }
 #gameBoard h1 {
     text-align: center;
-    padding-top: 10%;
+    padding-top: 3%;
     font-size: 8em;
     font-family: bit;
 }
@@ -81,7 +99,71 @@
     font-family: bit;
 }
 #calculation{
-    margin-top:-15%;
+    margin-top:-8%;
+}
+#submitName{
+    margin-left: 35%;
+}
+#songScoreMenu{
+
+}
+#songScoreboard{
+    background-color: #B0B0B0;
+    width:800px;
+    height:800px;
+    opacity: .8;
+    border-radius: 25px;
+    margin: auto;
+
+}
+#songScoreboard h1{
+    font-family: bit;
+    font-size: 8em;
+    text-align: center;
+    padding-top: 45px;
+
+}
+table {
+    font-family: bit;
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    font-size: 24px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #FF8C00;
+}
+tr:nth-child(odd) {
+    background-color: #D1EEEE;
+}
+.list-styler{
+    height: 40%;
+    width: 30%;
+    z-index: 3;
+    margin:auto;
+    margin-top: 5%;
+    opacity: .8;
+    list-style-type: none;
+
+}
+.list-styler li {
+    background-color:#B0B0B0;
+    padding-top:20px;
+    padding-left: 80px;
+    padding-bottom: 10px;
+    font-size: 2em;
+    border-radius: 25px;
+}
+.list-styler li:hover {
+    background-color: #FFFF99;
+
 }
 .hide{
 display:none;
