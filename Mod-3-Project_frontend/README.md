@@ -1,7 +1,6 @@
 ISSUES FOR THURS
-    POPULATE SCORES already fetched neet to populate the div that is already created.
-        use table format:
-                            SONG NAME
-                        RANK | NAME | SCORE
-    fancy shit
-    REFACTOR
+    Easy-Medium-Hard
+    hover over song-list
+        show easy medium hard
+        determine refresh rate upon difficulty
+        

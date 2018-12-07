@@ -51,6 +51,7 @@
 
 #home-Button{
     z-index: 2;
+    margin:auto;
 }
 #start{
     z-index:2;
@@ -75,6 +76,7 @@
     width: 20px;
     font-family: bit;
     color: #fff;
+    text-shadow: 4px 4px #000;
 }
 
 #gameBoard{
@@ -110,10 +112,11 @@
 #songScoreboard{
     background-color: #B0B0B0;
     width:800px;
-    height:800px;
+    height:auto;
     opacity: .8;
     border-radius: 25px;
     margin: auto;
+    padding-bottom: 30px;
 
 }
 #songScoreboard h1{
@@ -122,6 +125,21 @@
     text-align: center;
     padding-top: 45px;
 
+}
+#homeButton{
+        background-color: #4CAF50; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s; /* Safari */
+          transition-duration: 0.4s;
+          opacity: 1;
 }
 table {
     font-family: bit;
