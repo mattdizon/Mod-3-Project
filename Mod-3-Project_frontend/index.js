@@ -73,6 +73,12 @@
             songReset()
             document.getElementById("audio-3").play()
         }
+        else if (event.target.dataset.id === "4"){
+            start.setAttribute('class', "song-4")
+            start.classList.remove('hide')
+            songReset()
+            document.getElementById("audio-4").play()
+        }
     }
 // function to start song.
     function playGame(){
@@ -120,6 +126,20 @@
                     c.style.backgroundImage = "url('images/home.jpg')"
                 }
             }
+            else if (start.classList.contains('song-4')){
+                let songId = 4
+                c.style.backgroundImage = "url('https://media.giphy.com/media/2A0jMKmXiAixKTrITQ/giphy.gif')"
+                let aud = document.getElementById("audio-4");
+                aud.play()
+                aud.onplaying = function() {
+                    generateCircle()
+                }
+                aud.onended = function() {
+                    stopGame(songId)
+                    c.style.backgroundImage = "url('images/home.jpg')"
+                }
+            }
+
 
     }
 // helper function to reset song after a game and after previewing song
@@ -185,16 +205,20 @@
             setTimeout(function(){
                 ballTimeout(redCircle1,redCircle2,redCircleFunc)
             }
-            , 2000)
+            , 1500)
             redCircle1.addEventListener("click", function(event){
+                let percent = document.getElementById('percent')
                stage.removeChild(event.target);
                stage.update();
                score += 1
+               if(gamePercent.toFixed(2) < 60){
+                   percent.setAttribute('color', 'red')
+               }
                gameStats.innerHTML =
                `
                 <h1> ${score} </h1>
                 <br>
-                <h1 id="health"> ${gamePercent.toFixed(2)}%</h1>
+                <h1> ${gamePercent.toFixed(2)}%</h1>
                `
                console.log(ball)
                console.log(score)
@@ -350,7 +374,7 @@ let yellowCircleFunc = function yellowCircle(){
         setTimeout(function(){
             ballTimeout(yellowCircle1,yellowCircle2,yellowCircleFunc)
         }
-        , 2000)
+        , 1800)
         yellowCircle1.addEventListener("click", function(event){
            stage.removeChild(event.target);
            stage.update();
@@ -426,14 +450,13 @@ let yellowCircleFunc = function yellowCircle(){
 
         let submitBtn = document.querySelector('#submitName')
         submitBtn.addEventListener('submit',function (e){
-            e.preventDefault()
             addScore().then(selectedSongScore(songId))
         })
 
         function addScore(e){
             let playerName = document.querySelector('#playerOne').value
 
-            fetch(`http://localhost:3000/scores`, {
+            fetch(`https://osu-backend.herokuapp.com/scores`, {
                 method: "POST",
                 headers: {"Content-Type":"application/json"},
                 body: JSON.stringify({name: playerName, points: showScore, song_id: songId})
@@ -487,13 +510,13 @@ let yellowCircleFunc = function yellowCircle(){
 
 
     function getScores(songId){
-        return fetch(`http://localhost:3000/songs/${songId}/scores`)
+        return fetch(`https://osu-backend.herokuapp.com/songs/${songId}/scores`)
         .then(resp => resp.json())
 
     }
 
     function getSongs(){
-        return fetch(`http://localhost:3000/songs`)
+        return fetch(`https://osu-backend.herokuapp.com/songs`)
         .then(resp => resp.json())
     }
 
